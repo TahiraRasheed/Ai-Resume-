@@ -112,7 +112,7 @@ export default function JobsPage() {
                 <Filter className="mr-2 h-4 w-4" />
                 Filter
               </Button>
-              <Button className="bg-[#00549A]"size="sm" onClick={() => setIsOpen(true)}>
+              <Button className="bg-[#BA02E1] hover:bg-[#8C06B7]"size="sm" onClick={() => setIsOpen(true)}>
                 <Plus className="mr-2 h-4 w-4" />
                 Add Job
               </Button>
@@ -196,7 +196,7 @@ export default function JobsPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+                  className="bg-[#BA02E1] hover:bg-[#8C06B7] text-white px-4 py-2 rounded disabled:opacity-50"
                 >
                   {isSubmitting ? 'Adding...' : 'Add Job'}
                 </button>

@@ -59,7 +59,7 @@ export default function ResumePage() {
     setUploadStatus("idle")
     setErrorMessage("")
 
-    const backendUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"
+
     const url = `http://localhost:8000/api/resume/upload_resume/`
 
     const formData = new FormData()
@@ -109,7 +109,7 @@ export default function ResumePage() {
                 </p>
                 <div className="flex justify-center">
                   <Label htmlFor="resume-upload" className="cursor-pointer">
-                    <div className="flex items-center justify-center px-4 py-2 bg-[#00549A] text-primary-foreground rounded-md hover:bg-primary/90">
+                    <div className="flex items-center justify-center px-4 py-2 bg-[#BA02E1] text-primary-foreground rounded-md hover:bg-[#8C06B7]">
                       <Upload className="mr-2 h-4 w-4" />
                       <span>Select File</span>
                     </div>
@@ -142,9 +142,9 @@ export default function ResumePage() {
             </div>
           </CardContent>
           <CardFooter>
-            <Button onClick={handleUpload} disabled={!file || isUploading} className="w-full">
+            <Button onClick={handleUpload} disabled={!file || isUploading} className="w-full bg-[#BA02E1] hover:bg-[#8C06B7]">
               {isUploading ? (
-                <><Loader2 className="mr-2 h-4 w-4 bg-[#00549A] animate-spin" />Analyzing Resume...</>
+                <><Loader2 className="mr-2 h-4 w-4 bg-[#BA02E1] animate-spin" />Analyzing Resume...</>
               ) : (
                 "Analyze Resume"
               )}

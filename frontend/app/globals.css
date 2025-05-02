@@ -57,3 +57,72 @@
     @apply bg-background text-foreground;
   }
 }
+.radial-hero-bg {
+  background: radial-gradient(
+    circle,
+    #D500F9 0%,
+    #BA02E1 11%,
+    #8C06B7 32%,
+    #670A96 52%,
+    #4D0C7E 70%,
+    #3D0E70 87%,
+    #380F6B 100%
+  );
+}
+
+.blob-hero-1 {
+  position: absolute;
+  right: 7%;
+  top: 17%;
+  max-width: 300px;
+}
+.blob-hero-2 {
+  position: absolute;
+  right: 19%;
+  top: 65%;
+  max-width: 165px;
+  transform: rotate(200deg);
+}
+.blob-hero-3 {
+  position: absolute;
+  left: 24%;
+  top: 63%;
+  max-width: 150px;
+}
+
+.ra-bg-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/resume-amalysis-bg.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.ra-bg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/smart-scroting-bg.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+.ra-bg-3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../public/images/cv-mgt-bg.png");
+  background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+ .sidebar-gradient-bg {
+  background: linear-gradient(182deg, #D500F9 0%, #BA02E1 11%, #8C06B7 32%, #670A96 52%, #4D0C78 70%, #3D0E70 87%, #380F6B 100%);
+}
+ .header-gradient-bg {
+  background: linear-gradient(93deg, #D500F9 0%, #BA02E1 11%, #8C06B7 32%, #670A96 52%, #4D0C78 70%, #3D0E70 87%, #380F6B 100%);
+}

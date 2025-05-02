@@ -1,3 +1,4 @@
+'use client';
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -18,7 +19,7 @@ export function ParsingAccuracy() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <PieChartIcon className="h-5 w-5 text-primary" />
+          <PieChartIcon className="h-5 w-5 " />
           Resume Parsing Accuracy
         </CardTitle>
         <CardDescription>LLM parsing performance and common issues</CardDescription>
@@ -30,7 +31,7 @@ export function ParsingAccuracy() {
               <span className="text-sm font-medium">Overall Accuracy</span>
               <span className="text-2xl font-bold">{accuracyData.overallAccuracy}%</span>
             </div>
-            <Progress value={accuracyData.overallAccuracy} className="h-2" />
+            <Progress value={accuracyData.overallAccuracy} className="h-2 [&>div]:!bg-[#BA02E1]" />
           </div>
 
           <div>

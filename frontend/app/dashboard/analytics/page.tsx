@@ -91,7 +91,7 @@ export default function AnalyticsPage() {
               onClick={() => setSelectedJobId(job.id)}
               className={`px-4 py-2 text-sm font-medium rounded ${
                 selectedJobId === job.id
-                  ? 'bg-[#00549A] text-white'
+                  ? 'bg-[#BA02E1] hover:bg-[#8C06B7] text-white'
                   : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
               }`}
             >

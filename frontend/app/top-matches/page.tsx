@@ -1,3 +1,4 @@
+'use client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -37,7 +38,7 @@ export function TopMatches() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Star className="h-5 w-5 text-primary" />
+          <Star className="h-5 w-5 " />
           Top Matches This Week
         </CardTitle>
         <CardDescription>AI-recommended candidates with highest match scores</CardDescription>

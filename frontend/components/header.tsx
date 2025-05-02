@@ -13,7 +13,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-
+import '../app/globals.css'; 
 interface HeaderProps {
   toggleSidebar: () => void
   miniSidebar: boolean
@@ -42,7 +42,7 @@ export default function Header({ toggleSidebar, miniSidebar }: HeaderProps) {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-10 flex h-16 items-center border-b border-gray-200 bg-white px-4">
+    <header className="sticky top-0 z-10 flex h-16 items-center border-b border-gray-200 header-gradient-bg px-4">
       <Button variant="ghost" size="icon" className="mr-4" onClick={toggleSidebar}>
         <Menu className="h-6 w-6" />
         <span className="sr-only">Toggle sidebar</span>

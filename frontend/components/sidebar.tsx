@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import '../app/globals.css'; 
 
 import { useState } from "react"
 import Link from "next/link"
@@ -77,7 +78,7 @@ export default function Sidebar({ open, miniSidebar }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed inset-y-0 left-0 z-50 transform border-r border-gray-200 bg-[#00549A] transition-all duration-300 ease-in-out",
+        "fixed inset-y-0 left-0 z-50 transform border-r border-gray-200 sidebar-gradient-bg transition-all duration-300 ease-in-out",
         // On mobile: position as overlay
         isMobile ? "w-64" : miniSidebar ? "w-16" : "w-64",
         // On mobile: translate out of view when closed
@@ -109,70 +110,37 @@ export default function Sidebar({ open, miniSidebar }: SidebarProps) {
           )}
           <nav className={cn("space-y-1", miniSidebar ? "px-1" : "px-2")}>
             <ul className="space-y-1">
-              <NavItem
-                icon={<LayoutGrid size={18} />}
-                label="Dashboard"
-                href="/"
-                // hasDropdown
-                miniSidebar={miniSidebar}
-              />
-              {/* <NavItem
-                icon={<LayoutGrid size={18} />}
-                label="Candidates"
-                href="/candidatelist"
-                // hasDropdown
-                miniSidebar={miniSidebar}
-              /> */}
-              <NavItem  icon={<FileText size={18} />} label="Resume" href="/resume" miniSidebar={miniSidebar} />
-              <NavItem icon={<Users size={18} />} label="Jobs" href="/jobs" miniSidebar={miniSidebar} />
-              <NavItem
-                icon={<ChartArea size={18} />}
-                label="Analytics"
-                href="/analytics"
-                // hasDropdown
-                miniSidebar={miniSidebar}
-              />
-               {/* <NavItem
-                icon={<Settings size={18} />}
-                label="Settings"
-                href="/settings"
-                // hasDropdown
-                miniSidebar={miniSidebar}
-              /> */}
+            <NavItem
+  icon={<LayoutGrid size={18} />}
+  label="Dashboard"
+  href="/dashboard"             // if you have a dashboard/index/page.tsx
+  miniSidebar={miniSidebar}
+/>
+
+<NavItem
+  icon={<FileText size={18} />}
+  label="Resume"
+  href="/dashboard/resume"
+  miniSidebar={miniSidebar}
+/>
+
+<NavItem
+  icon={<Users size={18} />}
+  label="Jobs"
+  href="/dashboard/jobs"
+  miniSidebar={miniSidebar}
+/>
+
+<NavItem
+  icon={<ChartArea size={18} />}
+  label="Analytics"
+  href="/dashboard/analytics"
+  miniSidebar={miniSidebar}
+/>
+
             </ul>
           </nav>
-{/* 
-          {!miniSidebar && (
-            <div className="mt-6 px-4 pb-2">
-              <p className="text-xs font-semibold uppercase text-[#ffffff]">Others</p>
-            </div>
-          )}
-          <nav className={cn("space-y-1 mt-6", miniSidebar ? "px-1" : "px-2")}>
-            <ul className="space-y-1">
-              <NavItem
-                icon={<BarChart3 size={18} />}
-                label="Charts"
-                href="/charts"
-                hasDropdown
-                miniSidebar={miniSidebar}
-              />
-              <NavItem
-                icon={<Boxes size={18} />}
-                label="UI Elements"
-                href="/ui-elements"
-                hasDropdown
-                miniSidebar={miniSidebar}
-              />
-              <NavItem
-                icon={<KeyRound size={18} />}
-                label="Authentication"
-                href="/auth"
-                hasDropdown
-                miniSidebar={miniSidebar}
-              />
-            </ul>
-          </nav> */}
-        </div>
+</div>
       </div>
     </aside>
   )

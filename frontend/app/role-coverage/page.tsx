@@ -1,3 +1,4 @@
+'use client';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
@@ -40,7 +41,7 @@ export function RoleCoverage() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
-          <Briefcase className="h-5 w-5 text-primary" />
+          <Briefcase className="h-5 w-5 " />
           Role Coverage Analysis
         </CardTitle>
         <CardDescription>How well current roles are matched with qualified candidates</CardDescription>
@@ -77,7 +78,7 @@ export function RoleCoverage() {
               </div>
               <Progress
                 value={role.coveragePercentage}
-                className={`h-2 ${
+                className={`h-2 [&>div]:!bg-[#BA02E1] ${
                   role.coveragePercentage > 80
                     ? "bg-green-100"
                     : role.coveragePercentage > 50
